@@ -14,3 +14,15 @@
 ✔️ PR 규칙
 PR 제목: 이름 / 주차 / 주제
 ex) Min sung / 3월 2주차 / 프로세스 
+
+---
+
+
+✔️ 과제 체크
+
+| 제출자  | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 | 9주차 | 10주차 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| [Daniel-kim](https://github.com/Daniel-kim-junior) |  |  |  |  |  |  |  |  |  |  | 
+| [Seo-jin](https://github.com/num1dev) |  |  |  |  |  |  |  |  |  |  | 
+| [Sin-dain](https://github.com/FunnyDain) |  |  |  |  |  |  |  |  |  |  | 
+
