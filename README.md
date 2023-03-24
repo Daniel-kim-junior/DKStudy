@@ -24,5 +24,5 @@ ex) Min sung / 3월 2주차 / 프로세스
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [Daniel-kim](https://github.com/Daniel-kim-junior) |  |  |  |  |  |  |  |  |  |  | 
 | [Seo-jin](https://github.com/num1dev) |  |  |  |  |  |  |  |  |  |  | 
-| [Sin-dain](#FunnyDain) |  |  |  |  |  |  |  |  |  |  | 
+| [Sin-dain](https://github.com/FunnyDain) |  |  |  |  |  |  |  |  |  |  | 
 
