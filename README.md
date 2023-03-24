@@ -22,7 +22,7 @@ ex) Min sung / 3월 2주차 / 프로세스
 
 | 제출자  | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 | 9주차 | 10주차 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [Daniel-kim](#Daniel-kim-junior) |  |  |  |  |  |  |  |  |  |  | 
+| [Daniel-kim](https://github.com/Daniel-kim-junior) |  |  |  |  |  |  |  |  |  |  | 
 | [Seo-jin](#num1dev) |  |  |  |  |  |  |  |  |  |  | 
 | [Sin-dain](#FunnyDain) |  |  |  |  |  |  |  |  |  |  | 
 
