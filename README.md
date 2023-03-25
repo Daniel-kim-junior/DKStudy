@@ -23,9 +23,9 @@ ex) Min sung / 3월 2주차 / 프로세스
 | 제출자  | 1주차 | 2주차 | 3주차 | 4주차 | 5주차 | 6주차 | 7주차 | 8주차 | 9주차 | 10주차 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [Daniel-kim](https://github.com/Daniel-kim-junior) |  |  |  |  |  |  |  |  |  |  | 
-| [Hong-Seo-jin](https://github.com/num1dev) | -[x] |  |  |  |  |  |  |  |  |  | 
-| [Shin-da-in](https://github.com/FunnyDain) | [] |  |  |  |  |  |  |  |  |  | 
-| [Kang-ye-won](https://github.com/yewonkang00) | [] |  |  |  |  |  |  |  |  |  | 
-| [Hong-seung-hee](https://github.com/mowgood) | [] |  |  |  |  |  |  |  |  |  |
-| [Kim-chang-heon](https://github.com/changheonkim) | [] |  |  |  |  |  |  |  |  |  |
+| [Hong-Seo-jin](https://github.com/num1dev) | ✔️ |  |  |  |  |  |  |  |  |  | 
+| [Shin-da-in](https://github.com/FunnyDain) |  |  |  |  |  |  |  |  |  |  | 
+| [Kang-ye-won](https://github.com/yewonkang00) |  |  |  |  |  |  |  |  |  |  | 
+| [Hong-seung-hee](https://github.com/mowgood) |  |  |  |  |  |  |  |  |  |  |
+| [Kim-chang-heon](https://github.com/changheonkim) |  |  |  |  |  |  |  |  |  |  |
 
