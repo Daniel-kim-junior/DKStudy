@@ -28,4 +28,8 @@ ex) Min sung / 3월 2주차 / 프로세스
 | [Kang-ye-won](https://github.com/yewonkang00) |  |  |  |  |  |  |  |  |  |  | 
 | [Hong-seung-hee](https://github.com/mowgood) |  |  |  |  |  |  |  |  |  |  |
 | [Kim-chang-heon](https://github.com/changheonkim) |  |  |  |  |  |  |  |  |  |  |
+| [Koo-in-young](https://github.com/9noeyni9) |  |  |  |  |  |  |  |  |  |  |
+
+
+
 
