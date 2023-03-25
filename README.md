@@ -1,4 +1,4 @@
-# DKStudy
+# CS and interview Study
 
 ---
 ✔️ 스터디 참여 방법
