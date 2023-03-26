@@ -1,0 +1,10 @@
+DEBUG: org.springframework.web.servlet.DispatcherServlet - GET "/myapp/", parameters={}
+# DispatcherServlet로 GET "/myapp/"을 했고 parameters={}로 비어있음
+DEBUG: org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to dk1.kosa.myapp.HomeController#home(Locale, Model)
+#  Mapped to dk1.kosa.myapp.HomeController#home(Locale, Model)을 함
+INFO : dk1.kosa.myapp.HomeController - Welcome home! The client locale is ko_KR.
+DEBUG: org.springframework.web.servlet.view.JstlView - View name 'home', model {serverTime=2023년 2월 28일 오후 4시 40분 3초 KST}
+# 리턴을 'home', model {serverTime=2023년 2월 28일 오후 4시 40분 3초 KST}이 넘어옴
+DEBUG: org.springframework.web.servlet.view.JstlView - Forwarding to [/WEB-INF/views/home.jsp]
+DEBUG: org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+# 200으로 성공
