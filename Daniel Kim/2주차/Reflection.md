@@ -33,3 +33,21 @@ Java는 런타임 타입정보를 담고 있는 특수한 클래스를 제공하
 사용 예시 - 만약 서버를 운영중에 보안에 위배 되는 요청을 런타임에서 걸러내고 싶을 때 요청 객체에 대한 리플렉션 검사를 통해 필드를 검사할 수 있음
 따라서 Getter와 Setter를 이용하는 것보다 서비스 로직의 복잡도를 해결 할 수 있고
 더욱 객체 지향적인 아키텍처를 설계할 수 있다.
+
+---
+
+```
+Class<?> clazz = Class.forName("com.example.MyClass");
+Object obj = clazz.newInstance();
+
+```
+
+- 이런식으로 런타임 시에 동적으로 Class를 할당 해야할 때 쓸 수 있다
+
+또 field에도 동적으로 접근할 수 있고 접근제어자를 변경할 수도 있는데 이는 보안상으로 문제가 있을 수 있기 때문에 관련 조치를 취해주어야 한다.(코드 암호화, 서명 등)
+```
+MyClass obj = new MyClass();
+Field field = obj.getClass().getDeclaredField("myField");
+field.setAccessible(true); // private 필드에 접근하기 위해 접근 가능하게 설정
+field.set(obj, "new value"); // 필드 값 변경
+```
