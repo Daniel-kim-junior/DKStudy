@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mongodb": "^5.1.0"
+  },
+  "name": "changheon",
+  "version": "1.0.0",
+  "main": "day3.js",
+  "devDependencies": {},
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
