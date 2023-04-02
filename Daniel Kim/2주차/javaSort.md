@@ -30,6 +30,9 @@ Java의 QuickSort는 DualPivotQuickSort이다. 이 DualPivotQuickSort는
 
 
 ### 결론은...
+Quicksort는 k 값이 균일하지 않은 경우 최악의 경우에는 배열을 분할할 때 마다 한쪽은 0개의 원소만을 가지고 분할이 일어나는 경우가 발생할 수 있습니다. 이 경우에는 T(n) = T(n-1) + O(n)으로 나타낼 수 있다.
+이는 풀어서 O(n^2)이기 때문에 불안정한 Sort다
+자바는 내부적으로 정렬되어있으면 병합정렬을 사용하지만 이런 최악의 경우를 생각해야하기 때문에
 Java로 큰 Primitive type 배열을 정렬해야 할 때는 Integer Type같은 Collections.sort()를
 사용하자 (병합 정렬을 사용하기 때문에 최악의 경우를 상정하지 않아도 된다.)
 
