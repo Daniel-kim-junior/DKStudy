@@ -156,12 +156,15 @@ public class Product {
 
 ![RunTime Data Area](/99CDA2445C10EEEE29.jpeg)
 
+
 ### RunTime Data Area in JVM
 
 - RunTime Data Area는 Process로서의 JVM이 프로그램을 잘 수행하기 위해 OS로부터 할당받은 메모리 영역이다.
   - JVM이 기동되면서 initial Class의 메인 메소드가 실행되고 그에 따라 애플리케이션이 연계적으로 수행될 때 이 실행을 위한,
     Runtime에서 일어나는 모든 정보를 저장하는 곳이다. 특정 메소드를 수행하려면 그 메소드가 속한 클래스에 대한 metadata(클래스 및 필드와 메서드에 대한 정보, method code 등)도 필요하고, 이 metadata를 활용해서 class에 대한 object를 만들면
     그 오브젝트를 가리키는 reference 변수들도 저장이 되어야 하기 때문
+
+
 
 ### 데이터 생성 소멸 영역에 따라 구분한 Runtime Data Area
 
@@ -220,8 +223,8 @@ public class Product {
     javap -v -p -s target.classes.example.Main
     ```
 
-    ```
-    Constant pool:
+```
+Constant pool:
 
 #1 = Methodref #5.#21 // java/lang/Object."<init>":()V
 #2 = Class #22 // org/eminentstar/model/simple/Product
@@ -282,7 +285,7 @@ Start Length Slot Name Signature
 }
 SourceFile: "Main.java"
 
-````
+```
 
     java 코드로 1줄로 표현된 아래 코드는 Product object에 대한 reference 변수 p에 new 키워드 및 생성자를 호출해서 생성된 Product object를 참조하는 참조값을 p에 할당한다.
 
@@ -357,4 +360,4 @@ Class Loader의 클래스 배치 과정
     클래스 initialization은 동시에 여러 스레드에서 시도를 할 수 있기 때문에 어떤 클래스에 대해 initialization 진행 시 lock을 잡고 진행함.
     \*\*\*클래스의 Initialization이 일어나는 시점 - 다음의 JVM instruction을 수행할 때(new, getstatic, putstatic, invokestatic)
     위 instruction들은 직간접적으로 해당 class를 참조함. - 클래스의 instance를 생성한다던가 - static method를 호출한다거나 - static field를 참조한다거나 - java.lang.reflect 패키지에서 해당 클래스에 대한 접근 시도를 할 때 (예를 들면 Class.forName("org.eminentstar.model.simple.Product")와 같이) - subclass의 initialization시 - default method를 가지는 인터페이스인 경우, 이 인터페이스를 구현한(같은 hierarchy안에 있는) 클래스의 initialization시에 인터페이스가 initialization이 일어남. - JVM 기동시의 initial class인 경우
-````
+
