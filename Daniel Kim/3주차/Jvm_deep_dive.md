@@ -57,14 +57,15 @@ public class Product {
 
 위의 Product()를 호출하는 main 메소드를 수행하기 위해 JVM을 기동
 
-\*\*\*java -classpath target/classes org.example.Main
+***java -classpath target/classes org.example.Main
 
 우선 JVM은 bootstrap class loader라는 최상위 클래스 로더가 먼저 맨 처음에 지정한 클래스(임의의 Init 클래스)를 로딩한다.
 (여기서는 Main())
 
 그 후에 JVM은 이 Main.class를 link/initialize하고, 메소드 access specifier가 public, return type void, main(String)인 메소드를 찾아 invoke하면서 JVM이 기동한다. (load/link/initialize의 3가지를 거친다.)
 
-\*\*\*여기서 public static void main() method를 가지는 initial class는 특정한 기능을 수행하는 class가 아닌, JVM 기동을 위한 entry point 역할이라고 보면 된다. 이 main을 실행하면서 코드의 흐름이 타고 타면서 프로그램이 진행 된다.
+
+***여기서 public static void main() method를 가지는 initial class는 특정한 기능을 수행하는 class가 아닌, JVM 기동을 위한 entry point 역할이라고 보면 된다. 이 main을 실행하면서 코드의 흐름이 타고 타면서 프로그램이 진행 된다.
 
 예시로 톰캣(7버전)의 서블릿 컨테이너인 catalina engine을 실행시킬때는 Tomcat에서 별도로 JVM 기동을 위한 entry class Bootstrap을 만들어 놓았다
 
@@ -334,8 +335,10 @@ SourceFile: "Main.java"
 
         따라서, dup 명령어를 사용하여 reference를 복제하는 이유는, 객체의 생성 비용을 줄이고 메모리 사용량을 절약하기 위해서다. 또한, 여러 개의 참조 변수가 동일한 객체를 가리킬 수 있도록 하여, 객체의 다양한 활용이 가능해지도록 한다.
 
-    ### invokespecial instruction
-    invokespecial은 instance method를 inovke하는 instruction이긴 한데, <init>(생성자)나 superclass/private 메소드를 호출할 때 사용한다.
+
+  ### invokespecial instruction
+    
+  invokespecial은 instance method를 inovke하는 instruction이긴 한데, <init>(생성자)나 superclass/private 메소드를 호출할 때 사용한다.
     <init>(instance intialization method)
     JVM 레벨에서의 생성자는 <init>이란 이름을 가짐.
     - Product -> Object까지 intitialization 된다.
@@ -367,6 +370,6 @@ Class Loader의 클래스 배치 과정
 
     클래스 initialization은 동시에 여러 스레드에서 시도를 할 수 있기 때문에 어떤 클래스에 대해 initialization 진행 시 lock을 잡고 진행함.
     
-\*\*\*클래스의 Initialization이 일어나는 시점 - 다음의 JVM instruction을 수행할 때(new, getstatic, putstatic, invokestatic)
+***클래스의 Initialization이 일어나는 시점 - 다음의 JVM instruction을 수행할 때(new, getstatic, putstatic, invokestatic)
     위 instruction들은 직간접적으로 해당 class를 참조함. - 클래스의 instance를 생성한다던가 - static method를 호출한다거나 - static field를 참조한다거나 - java.lang.reflect 패키지에서 해당 클래스에 대한 접근 시도를 할 때 (예를 들면 Class.forName("org.eminentstar.model.simple.Product")와 같이) - subclass의 initialization시 - default method를 가지는 인터페이스인 경우, 이 인터페이스를 구현한(같은 hierarchy안에 있는) 클래스의 initialization시에 인터페이스가 initialization이 일어남. - JVM 기동시의 initial class인 경우
 
