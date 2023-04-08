@@ -158,7 +158,7 @@ public class Product {
     }
 ```
 
-![RunTime Data Area](/99CDA2445C10EEEE29.jpeg)
+![RunTime Data Area](99CDA2445C10EEEE29.jpeg)
 
 
 ### RunTime Data Area in JVM
