@@ -219,14 +219,15 @@ public class Product {
     6. Runtime constant pool(각 클래스마다 별도의 constant pool이 존재)
     - 이 구조는 클래스의 이름, 상위 클래스의 이름, 인터페이스의 이름, 필드와 메서드의 이름, 타입, 그리고
     값과 같은 상수 데이터를 저장하는 pool 또한 실행중에 동적으로 로딩되는 클래스나 메소드를 참조하는데에도 사용된다
-
-
-    ### Object Creation
-
     ```
-    javap -v -p -s target.classes.example.Main
-    ```
+
+
+### Object Creation
+
 ```
+javap -v -p -s target.classes.example.Main
+```
+
 ```
 Constant pool:
 
