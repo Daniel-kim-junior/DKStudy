@@ -371,6 +371,8 @@ Class Loader의 클래스 배치 과정
 
     클래스 initialization은 동시에 여러 스레드에서 시도를 할 수 있기 때문에 어떤 클래스에 대해 initialization 진행 시 lock을 잡고 진행함.
     
-***클래스의 Initialization이 일어나는 시점 - 다음의 JVM instruction을 수행할 때(new, getstatic, putstatic, invokestatic)
+
+### 클래스의 Initialization이 일어나는 시점:
+    다음의 JVM instruction을 수행할 때(new, getstatic, putstatic, invokestatic)
     위 instruction들은 직간접적으로 해당 class를 참조함. - 클래스의 instance를 생성한다던가 - static method를 호출한다거나 - static field를 참조한다거나 - java.lang.reflect 패키지에서 해당 클래스에 대한 접근 시도를 할 때 (예를 들면 Class.forName("org.eminentstar.model.simple.Product")와 같이) - subclass의 initialization시 - default method를 가지는 인터페이스인 경우, 이 인터페이스를 구현한(같은 hierarchy안에 있는) 클래스의 initialization시에 인터페이스가 initialization이 일어남. - JVM 기동시의 initial class인 경우
 
