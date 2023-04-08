@@ -2,11 +2,11 @@
 
 ### Intro
 
-```
 JVM의 Runtime Data Area 영역에서
 객체가 생성되는 과정을 깊게 파고 들어가 볼 것이다.
 아래와 같은 Product 클래스가 있다고 가정해보자 이 클래스의 오브젝트를 생성 해보도록 하자
 
+```
 public class Product {
   public static final int PAYMENT_WINDOW_TITLE_MAX_BYTE = 4000;
   public static final String ERROR_MESSAGE = "ERROR";
@@ -49,6 +49,9 @@ public class Product {
 5. 멤버 field의 선언문에 초기화를 같이 하고 있다면 이 초기화가 수행된다. (globalProduct)
 
 6. 그 후에 생성자가 호출된다.
+
+
+
 
 ### JVM Start Up
 
@@ -317,7 +320,10 @@ SourceFile: "Main.java"
 
     ![Resolution 후](/99CDA2445C10EEEE29.jpeg)
 
-    ### dup instruction
+  
+  
+  
+### dup instruction
 
         - dup은 operand stack의 top을 duplicate해서 operand stack에 push하는 instruction
         Java에서 dup(duplicate) 명령어는 operand stack에서 값을 복사하여 새로운 값으로 스택에 추가한다. 따라서 dup 명령어를 사용하여 reference를 복제할 경우, reference가 가리키는 객체의 주소가 새로운 reference로 복제되며, 이를 활용하여 여러 개의 reference가 동일한 객체를 가리킬 수 있다.
@@ -335,6 +341,8 @@ SourceFile: "Main.java"
     - Product -> Object까지 intitialization 된다.
     init 수행 후 드디어 초기화가 된다.
 
+
+      
 ### astore instruction
 
 마지막으로 astore instruction을 통해서 operand stack의 top(objectref)를 pop해서 local variable에 저장한다.
@@ -358,6 +366,7 @@ Class Loader의 클래스 배치 과정
     <clinit> 호출은 superclass, superinterfaces의 initialization을 진행한 후에 일어난다.
 
     클래스 initialization은 동시에 여러 스레드에서 시도를 할 수 있기 때문에 어떤 클래스에 대해 initialization 진행 시 lock을 잡고 진행함.
-    \*\*\*클래스의 Initialization이 일어나는 시점 - 다음의 JVM instruction을 수행할 때(new, getstatic, putstatic, invokestatic)
+    
+\*\*\*클래스의 Initialization이 일어나는 시점 - 다음의 JVM instruction을 수행할 때(new, getstatic, putstatic, invokestatic)
     위 instruction들은 직간접적으로 해당 class를 참조함. - 클래스의 instance를 생성한다던가 - static method를 호출한다거나 - static field를 참조한다거나 - java.lang.reflect 패키지에서 해당 클래스에 대한 접근 시도를 할 때 (예를 들면 Class.forName("org.eminentstar.model.simple.Product")와 같이) - subclass의 initialization시 - default method를 가지는 인터페이스인 경우, 이 인터페이스를 구현한(같은 hierarchy안에 있는) 클래스의 initialization시에 인터페이스가 initialization이 일어남. - JVM 기동시의 initial class인 경우
 
