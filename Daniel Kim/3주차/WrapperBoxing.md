@@ -4,7 +4,9 @@
 
 원시 타입의 값을 해당하는 wrapper 클래스의 객체로 바꾸는 과정을 의미
 
-***자바 컴파일러는 원시 타입이 아래 두 가지 경우에 해당할 때 autoBoxing을 적용한다.
+
+**자바 컴파일러는 원시 타입이 아래 두 가지 경우에 해당할 때 autoBoxing을 적용한다.
+
 
 ```
 Passed as a parameter to a method that expects an object of the corresponding wrapper class
@@ -87,6 +89,7 @@ class GFG
 - autoBoxing과 unBoxing을 사용한다면 Wrapper 클래스 타입과 원시 타입을 상호 교환 가능하게끔 사용할 수 있고
 - 명시적으로 타입 캐스팅을 수행하지 않아도 된다.
 
+
 ### 하지만 박싱된 기본 타입보단 기본 타입을 사용하자
 
 1. 기본 타입은 값만 가지고 있지만 박싱 된 타입은 값 + 식별성이라는 속성을 갖는다.
@@ -97,7 +100,8 @@ class GFG
 
 3. 기본 타입이 박싱된 타입보다 시간과 메모리 효율면에서 효율적이다.
 
-\*\*\*첫 번째 수가 두 번째 수보다 작으면 -1을 리턴하고 그렇지 않다면 같은지를 비교하는 프로그램
+
+### 첫 번째 수가 두 번째 수보다 작으면 -1을 리턴하고 그렇지 않다면 같은지를 비교하는 프로그램
 
 ```
 public class BrokenComparator {
@@ -177,7 +181,9 @@ System.out.println(sum);
 박싱 된 기본 타입은 언제 사용될까?
 
 컬렉션의 원소, 키, 값으로 쓴다. - 컬렉션은 기본 타입을 담을 수 없으므로
-
+                        
+---
+                        
 ### 번외 JPA 필드 타입을 wrapper class를 쓰는 이유
 
 1. Null 처리
