@@ -321,7 +321,7 @@ SourceFile: "Main.java"
     #22 = Utf8               org/eminentstar/model/simple/Product
     ```
 
-    ![Resolution 후](/99CDA2445C10EEEE29.jpeg)
+![Resolution 후](99CDA2445C10EEEE29.jpeg)
 
 ---
   
