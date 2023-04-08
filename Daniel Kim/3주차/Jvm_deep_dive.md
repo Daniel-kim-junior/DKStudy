@@ -50,7 +50,7 @@ public class Product {
 
 6. 그 후에 생성자가 호출된다.
 
-
+---
 
 
 ### JVM Start Up
@@ -168,7 +168,7 @@ public class Product {
     Runtime에서 일어나는 모든 정보를 저장하는 곳이다. 특정 메소드를 수행하려면 그 메소드가 속한 클래스에 대한 metadata(클래스 및 필드와 메서드에 대한 정보, method code 등)도 필요하고, 이 metadata를 활용해서 class에 대한 object를 만들면
     그 오브젝트를 가리키는 reference 변수들도 저장이 되어야 하기 때문
 
-
+---
 
 ### 데이터 생성 소멸 영역에 따라 구분한 Runtime Data Area
 
@@ -220,7 +220,7 @@ public class Product {
     - 이 구조는 클래스의 이름, 상위 클래스의 이름, 인터페이스의 이름, 필드와 메서드의 이름, 타입, 그리고
     값과 같은 상수 데이터를 저장하는 pool 또한 실행중에 동적으로 로딩되는 클래스나 메소드를 참조하는데에도 사용된다
     ```
-
+---
 
 ### Object Creation
 
@@ -303,6 +303,7 @@ SourceFile: "Main.java"
     4: invokespecial #3                  // Method org/eminentstar/model/simple/Product."<init>":()V
     7: astore_1
     ```
+---
 
 ### new instruction
 
@@ -322,7 +323,7 @@ SourceFile: "Main.java"
 
     ![Resolution 후](/99CDA2445C10EEEE29.jpeg)
 
-  
+---
   
   
 ### dup instruction
@@ -336,6 +337,7 @@ SourceFile: "Main.java"
 
         따라서, dup 명령어를 사용하여 reference를 복제하는 이유는, 객체의 생성 비용을 줄이고 메모리 사용량을 절약하기 위해서다. 또한, 여러 개의 참조 변수가 동일한 객체를 가리킬 수 있도록 하여, 객체의 다양한 활용이 가능해지도록 한다.
 
+---
 
   ### invokespecial instruction
     
@@ -345,7 +347,7 @@ SourceFile: "Main.java"
     - Product -> Object까지 intitialization 된다.
     init 수행 후 드디어 초기화가 된다.
 
-
+---
       
 ### astore instruction
 
@@ -358,8 +360,9 @@ Class Loader의 클래스 배치 과정
 
 2.  linking : (책 내용 인용) loading된 생성된 Class 타입을 Runtime 상태의 Binrary Type Data로 구성하는 과정
     linking은 verification, preparation, resolution 단계를 거친다.(JVM 구현체에 따라 resolution은 optional할 수도 있음.)
-    2-1. verification : .class 파일의 구조가 제대로 됬는지 검증하는 단계.
-    이미 Java Compiler가 class파일을 생성할 때 제대로 생성하겠지만서도, JVM입장에서는 어떤 class파일이 들어올지를 모르기 때문에 verification단계를 거침.
+        
+        2-1. verification : .class 파일의 구조가 제대로 됬는지 검증하는 단계.
+        이미 Java Compiler가 class파일을 생성할 때 제대로 생성하겠지만서도, JVM입장에서는 어떤 class파일이 들어올지를 모르기 때문에 verification단계를 거침.
 
         2-2. preparation : 클래스의 static fields를 위한 메모리를 할당하는 단계
 
